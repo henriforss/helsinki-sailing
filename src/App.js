@@ -24,7 +24,6 @@ const LikeButton = () => {
       </div>
     )
   }
-
 }
 
 const ShowWeather = () => {
@@ -47,7 +46,7 @@ const ShowWeather = () => {
   useEffect(getWeather, [])
   console.log(weather)
 
-  if (weather == null) {
+  if (weather === null) {
     return (
       <div>
         No data
@@ -62,7 +61,6 @@ const ShowWeather = () => {
           <li>Humidity: {weather.main.humidity} %</li>
           <li>Pressure: {weather.main.pressure} hPa</li>
           <li>Clouds: {weather.clouds.all} %</li>
-          <li>Rain: {weather.rain['1h']} mm/1h</li>
           <li>Wind: {weather.wind.speed} m/s</li>
           <li>Wind direction: {weather.wind.deg} degrees</li>
         </ul>
